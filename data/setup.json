@@ -1,12 +1,12 @@
 {
-    "ssid":"Debianlsd",
-    "pass":"123583121X",
-    "AP":"KodiDU",
+    "ssid":"",
+    "pass":"",
+    "AP":"",
     "passAP":"",
-    "SSDP":"KodiRemoteControl",
+    "SSDP":"",
     "Debug":"true",
     "XBMCLogin":"kodi",
-    "XBMCPass":"123583121X",
-    "XBMCPort":"8088",
-    "XBMCIP":"192.168.0.104"
+    "XBMCPass":"",
+    "XBMCPort":"",
+    "XBMCIP":""
 }
