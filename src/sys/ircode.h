@@ -116,16 +116,7 @@ void Recive_code()
 
         //RGB ttx- вкл/выкл
         case 0xE0E034CB:
-         /* if (modergb <= 7) {
-            //sendMessega("Mode" + String(modergb));
-            modeRGB(modergb);
-            modergb++;
-          }
-          else
-          {
-            modergb = 0;
-          }
-          */
+        
           break;
         case 0xE0E0609F:
          

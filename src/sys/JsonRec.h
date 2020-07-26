@@ -1,6 +1,10 @@
 #include <ArduinoJson.h>
 #include <ESP8266HTTPClient.h>
 
+String User ="";
+String Password = "";
+String IP = "";
+String Port = "";
 
 
 String jsonpost(String &json)
@@ -10,25 +14,15 @@ String jsonpost(String &json)
   char JSONmessageBuffer[300];
   root.prettyPrintTo(JSONmessageBuffer, sizeof(JSONmessageBuffer));
   HTTPClient httpg;
-  httpg.begin("http://kodi:123583121X@192.168.0.104:8088/jsonrpc");
+  httpg.begin("http://"+ User + ":" + Password + "@" + IP + ":" + Port + "/jsonrpc"); 
   httpg.addHeader("Content-Type", "application/json");
   int httpCode = httpg.POST(JSONmessageBuffer);
-  Serial.println("----------------- ");
-  Serial.println("json Buffer : "+ String(JSONmessageBuffer));
-  Serial.println("----------------- ");
   String payload = httpg.getString();
-
   DynamicJsonBuffer jsonBufferRe;
   JsonObject& roots = jsonBuffer.parseObject(payload);
   char JSONmessageBuffers[300];
   roots.prettyPrintTo(JSONmessageBuffers, sizeof(JSONmessageBuffers));
-
-  Serial.println("----------------- ");
-  Serial.println("json payload : "+ String(JSONmessageBuffers));
-  Serial.println("----------------- ");
-  //Debag_console(payload);
   httpg.end();
-  //json = loadJsondef(json);
   return payload;
 }
 
@@ -109,4 +103,13 @@ String jsonRead(String &json, String name) {
   DynamicJsonBuffer jsonBuffer;
   JsonObject& root = jsonBuffer.parseObject(json);
   return root[name].as<String>();
+}
+
+String loadconfig()
+{
+  User = jsonRead(configJson,"XBMCLogin");
+  Password = jsonRead(configJson,"XBMCPass");
+  IP = jsonRead(configJson,"XBMCIP");
+  Port = jsonRead(configJson,"192.168.0.104");
+  return "User : " + User + " Password :  " + Password + " IP : " + IP;
 }
