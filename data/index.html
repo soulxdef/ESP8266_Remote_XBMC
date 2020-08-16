@@ -1,25 +1,59 @@
 ﻿<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 <html>
 <head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+	<!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<title>Home XBMC</title>
 </head>
 <body>
-<h1 style="text-align:center"><strong><span style="color:#c0392b">Na</span><span style="color:#2ecc71">OT</span><span style="color:#e67e22">EBIS&nbsp;</span></strong></h1>
+	<p class="log">KODI Remote control</p>
+	<h2 class="wifi">WIFI</h2>
+	<h1 class="wifi">SSID и Password вашего wifi роутера</h1>
+	<form action="/ssid" method="get" name="Wifi" target="_self" class="login">
+		<p>
+			<label for="login">SSID</label>
+			<input name="ssid" type="text" value="">
+		</p>
+		<p>
+			<label for="password">Password</label>
+			<input name="password" type="password" id="password">
+		</p>
+			<button name="submit" type="submit" value="Сохранить" class="login-button"> Сохранить</button>
+	</form>
 
-<hr />
-<p style="text-align:center"><span style="color:#3498db"><strong>KIDI Remode control</strong></span></p>
-
-<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px; text-align:center"><span style="color:#000000"><strong><span style="background-color:#ffffff">WIFI</span></strong></span></div>
-
-<div style="background:#eeeeee; border:1px solid #cccccc; padding:5px 10px; text-align:center">
-<form action="/ssid" method="get" name="Wifi" target="_self">
-<p><input name="ssid" type="text" value="" /></p>
-<p><input name="password" type="text" /></p>
+<div class="about">
+<p>Настройка KODI</p>
+<h3>Введите логин и пароль, а так же IP и порт вашешего медиа сервера</h3>
+<div>
+<form action="/kodi" method="get" name="kodi" target="_self">
+<h2>Login</h2>
+<p>
+<input name="login" type="text" value="" /></p>
+<h2>Password</h2>
+<p><input name="Password" type="text" /></p>
+<h2>IP</h2>
+<p><input name="IP" type="text" /></p>
+<h2>Port</h2>
+<p><input name="Port" type="text" /></p>
 <p><input name="submit" type="submit" value="Сохранить" /></p>
 </form>
 
 
+
+
 <p>&nbsp;</p>
 </div>
+
+
+<p>&nbsp;</p>
+</div>
+
 </body>
 </html>
