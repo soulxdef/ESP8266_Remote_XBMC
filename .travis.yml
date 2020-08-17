@@ -24,28 +24,7 @@
 # Template #1: General project. Test it using existing `platformio.ini`.
 #
 
-# language: python
-# python:
-#     - "2.7"
-#
-# sudo: false
-# cache:
-#     directories:
-#         - "~/.platformio"
-#
-# install:
-#     - pip install -U platformio
-#     - platformio update
-#
-# script:
-#     - platformio run
-
-
-#
-# Template #2: The project is intended to be used as a library with examples.
-#
-
-language: python
+ language: python
  python:
      - "2.7"
 
@@ -54,15 +33,29 @@ language: python
      directories:
          - "~/.platformio"
 
-# env:
-#     - PLATFORMIO_CI_SRC=path/to/test/file.c
-#     - PLATFORMIO_CI_SRC=examples/file.ino
-#     - PLATFORMIO_CI_SRC=path/to/test/directory
-#
-install:
+ install:
      - pip install -U platformio
      - platformio update
-     - platformio lib install "ArduinoJson@5.13.4" 
+- platformio lib install "ArduinoJson@5.13.4"
+
+ script:
+     - platformio run
+
+
 #
-script:
-     - platformio ci --project-conf=./platformio.ini
+# Template #2: The project is intended to be used as a library with examples.
+#
+
+#language: python
+#python:
+#     - "2.7"
+#sudo: false
+#cache:
+#     directories:
+#         - "~/.platformio"
+#install:
+#     - pip install -U platformio
+#     - platformio update
+#     - platformio lib install "ArduinoJson@5.13.4" 
+#script:
+#     - platformio ci --project-conf=./platformio.ini
