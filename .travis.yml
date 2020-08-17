@@ -36,10 +36,11 @@
  install:
      - pip install -U platformio
      - platformio update
-- platformio lib install "ArduinoJson@5.13.4"
+     - platformio lib install "ArduinoJson@5.13.4"
 
  script:
-     - platformio run
+     - platformio ci --project-conf=/platformio.ini
+#     - platformio run
 
 
 #
