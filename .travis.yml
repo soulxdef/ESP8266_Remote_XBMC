@@ -62,7 +62,7 @@ language: python
  install:
      - pip install -U platformio
      - platformio update
-     -  platformio lib install "ArduinoJson@5.13.4" 
+     - platformio lib install "ArduinoJson@5.13.4" 
 #
 # script:
      - platformio ci --lib="./lib" --board=espressif8266 #--board=ID_2 --board=ID_N
