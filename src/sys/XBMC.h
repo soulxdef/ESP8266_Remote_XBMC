@@ -8,7 +8,6 @@
 
 void LoadModules()
 {  
-    Debag_console(loadconfig());
     Debag_console(http_init());
     Debag_console(ircode_init());  
     Debag_console(FS_init());

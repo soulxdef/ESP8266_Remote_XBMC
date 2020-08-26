@@ -59,6 +59,7 @@ String FS_init()
     }
   }
   configJson = readFile("setup.json");
+  loadconfig(configJson);
  HTTP.onNotFound([]() {
     if (!handleFileRead(HTTP.uri()))
       HTTP.send(404, "text/plain", "FileNotFound");
