@@ -105,11 +105,11 @@ String jsonRead(String &json, String name) {
   return root[name].as<String>();
 }
 
-String loadconfig()
+String loadconfig(String &json)
 {
-  User = jsonRead(configJson,"XBMCLogin");
-  Password = jsonRead(configJson,"XBMCPass");
-  IP = jsonRead(configJson,"XBMCIP");
-  Port = jsonRead(configJson,"192.168.0.104");
+  User = jsonRead(json,"XBMCLogin");
+  Password = jsonRead(json,"XBMCPass");
+  IP = jsonRead(json,"XBMCIP");
+  Port = jsonRead(json,"192.168.0.104");
   return "User : " + User + " Password :  " + Password + " IP : " + IP;
 }
