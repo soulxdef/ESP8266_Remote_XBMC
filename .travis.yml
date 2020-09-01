@@ -43,7 +43,7 @@
 
 
  script:
-     - platformio ci --lib="." --board=nodemcuv2
+     - platformio ci --board=nodemcuv2
 #    - platformio run
 
 
