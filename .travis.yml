@@ -38,7 +38,7 @@
      - pip install -U platformio
      - platformio update
      - platformio lib install "ArduinoJson@5.13.4"
-     - platformio lib install "IRremoteESP8266"
+     - platformio lib install "IRremoteESP8266@2.7.9"
 
 
 
@@ -63,4 +63,4 @@
 #     - platformio update
 #     - platformio lib install "ArduinoJson@5.13.4" 
 #script:
-#      - platformio ci --lib="." --board=nodemcuv2
+#      - platformio ci --board=nodemcuv2
