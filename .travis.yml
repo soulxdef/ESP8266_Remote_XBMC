@@ -63,4 +63,4 @@
 #     - platformio update
 #     - platformio lib install "ArduinoJson@5.13.4" 
 #script:
-#      - platformio ci --lib="." --board=nodemcuv2
+#      - platformio ci --board=nodemcuv2
