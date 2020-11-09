@@ -33,7 +33,8 @@
      directories:
          - "~/.platformio"
  env:
-     - PLATFORMIO_CI_SRC=src/main.cpp
+     - PLATFORMIO_CI_SRC=src/
+     #main.cpp
  install:
      - pip install -U platformio
      - platformio update
@@ -43,7 +44,8 @@
 
 
  script:
-     - platformio ci --lib="./lib" --board=nodemcuv2
+      - pio ci --project-conf=/platoformio.ini
+#     - platformio ci --lib="./lib" --board=nodemcuv2
 #    - platformio run
 
 
