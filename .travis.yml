@@ -44,7 +44,7 @@
 
 
  script:
-      - pio ci --project-conf=/platoformio.ini
+      - pio ci --project-conf="./platoformio.ini"
 #     - platformio ci --lib="./lib" --board=nodemcuv2
 #    - platformio run
 
